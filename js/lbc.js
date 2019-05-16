@@ -8,7 +8,7 @@ document.querySelectorAll('._3DFQ-').forEach(function(element) {
 	price = price.substring(1, price.length - 1).replace(' ','')
 	let cityInfos = element.querySelector('._2qeuk').innerHTML,
 	cityInfosLength = cityInfos.length
-	let zipCode = cityInfos.substring(cityInfosLength-6, cityInfosLength),
+	let zipCode = cityInfos.substring(cityInfosLength-5, cityInfosLength),
 	city = cityInfos.substring(0, cityInfosLength - 6)
 	post = {
 		'title': title,

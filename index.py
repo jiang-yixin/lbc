@@ -2,7 +2,7 @@ import urllib.request
 import json
 
 # get all posts
-lbcFileName = "lbc"
+lbcFileName = "20190516-77-LT-100K"
 f = urllib.request.urlopen('https://raw.githubusercontent.com/jiang-yixin/lbc/master/input/' + lbcFileName + '.json')
 posts = json.loads(f.read())
 
