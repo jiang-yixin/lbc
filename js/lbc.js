@@ -6,13 +6,16 @@ document.querySelectorAll('._3DFQ-').forEach(function(element) {
 	url = 'https://www.leboncoin.fr' + element.getElementsByTagName('a')[0].getAttribute('href'),
 	price = element.querySelector('._1NfL7').innerHTML.match(/>([0-9\s]+)</g)[0]
 	price = price.substring(1, price.length - 1).replace(' ','')
-	let city = element.querySelector('._2qeuk').innerHTML
-	
+	let cityInfos = element.querySelector('._2qeuk').innerHTML,
+	cityInfosLength = cityInfos.length
+	let zipCode = cityInfos.substring(cityInfosLength-6, cityInfosLength),
+	city = cityInfos.substring(0, cityInfosLength - 6)
 	post = {
 		'title': title,
 		'url': url,
 		'price': price,
-		'city': city
+		'city': city,
+		'zipCode': zipCode
 	}
 
 	posts.push(post)
