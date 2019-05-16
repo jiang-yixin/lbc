@@ -23,7 +23,9 @@ for i in range(len(posts)):
     zipCode = posts[i]['zipCode']
     city = posts[i]['city']
     population = 0
+    print (zipCode)
     for j in range(len(cities)):
+        # todo same zipcode may have serval cities
         if zipCode in cities[j]['codesPostaux']:
             population = cities[j]['population']
     text = posts[i]['title'] + ',' + posts[i]['url'] + ',' + posts[i]['price'] + ',' + city + ',' + zipCode + ',' + str(population)
