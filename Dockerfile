@@ -9,4 +9,4 @@ ENV PYTHONUNBUFFERED 1
 
 COPY . .
 
-CMD python index.py
+CMD python coloc.py

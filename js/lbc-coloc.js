@@ -1,6 +1,9 @@
 cities=[] // only for 1st page
 document.querySelectorAll('._2qeuk').forEach(function(element) {
-    cities.push(element.innerHTML)
+    city = {
+        'name': element.innerHTML
+    }
+    cities.push(city)
 })
 
 JSON.stringify(cities)
